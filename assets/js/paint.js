@@ -1,11 +1,11 @@
 function configureListeners() {
-    var images = document.getElementsByTagName('img'); 
+    let images = document.getElementsByTagName('img'); 
 
 
-     for (var i = 0; i < images.length; i++) {        
+     for (let i = 0; i < images.length; i++) {        
         // iterate over images and add mouseover event listeners 
-         document.getElementById(images[i].id).addEventListener('mouseover','addOpicity', false);
-         document.getElementById(images[i].id).addEventListener('mouseout', 'removeOpicity', false);    
+        images[i].addEventListener('mouseover',addOpacity, false);
+         images[i].getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false);    
     } 
 }
 
@@ -99,7 +99,7 @@ function getProductInfo(paintColor) {
         colorPrice.textContent =  price;
         
         let color = document.getElementById('color-name');
-        colorName.textContent = colorName;
+        color.textContent = colorName;
     }
     
 }
